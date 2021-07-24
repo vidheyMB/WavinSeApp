@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="oval">
+
+    <solid android:color="@color/colorPrimary"/>
+    <size android:height="@dimen/profile_height"
+          android:width="@dimen/profile_height"></size>
+    // The width and color of the border
+    <stroke
+        android:width="1dp"
+        android:color="@color/button_color" />
+
+    // The desired corner radius. reduce it to keep it less rounded
+    <corners android:radius="40dp" />
+
+    // Add your desired padding
+    <padding
+        android:left="0dp"
+        android:top="0dp"
+        android:right="0dp"
+        android:bottom="0dp">
+    </padding>
+
+</shape>

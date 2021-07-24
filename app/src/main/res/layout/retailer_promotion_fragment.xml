@@ -1,0 +1,32 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/promo_host"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".ui.enrollment.reatiler_promotion.RetailerPromotionFragment">
+
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:visibility="visible"
+    tools:listitem="@layout/row_offer_and_promotions"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    android:id="@+id/promotionRecycler">
+
+</androidx.recyclerview.widget.RecyclerView>
+
+<TextView
+    android:id="@+id/error_txt"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:textSize="@dimen/h3"
+    android:textAlignment="center"
+    android:layout_margin="@dimen/noraml_btn_height"
+    android:textStyle="normal"
+    android:visibility="gone"
+    android:textColor="@color/dark_grey"
+    android:text="No promotion result found." />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

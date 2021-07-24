@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:id="@+id/ticket_host"
+tools:context=".ui.enrollment.retailer_query.NewTicketFragment">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_vertical_small_margin">
+
+    <include layout="@layout/member_list_row"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F0F0F0"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:padding="@dimen/activity_vertical_small_margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Help Topic"
+                        android:padding="4dp"
+                        android:textColor="@color/textview_grey"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/enroll_round_background"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <Spinner
+                            android:id="@+id/help_topic_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/big_margin"
+                            android:layout_weight="10"
+                            android:background="@color/transparent"
+                            android:paddingLeft="@dimen/small_padding"
+                            android:spinnerMode="dialog" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/ic_arrow_drop_down_black_24dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Query Summary"
+                    android:padding="4dp"
+                    android:textColor="@color/textview_grey"/>
+                <EditText
+                    android:id="@+id/query_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/noraml_btn_height"
+                    android:padding="@dimen/small_padding"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:textColor="@color/dark"
+                    android:background="@drawable/enroll_round_background">
+
+                </EditText>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Query Details"
+                    android:padding="4dp"
+                    android:textColor="@color/textview_grey"/>
+                <EditText
+                    android:id="@+id/query_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/noraml_btn_height"
+                    android:padding="@dimen/small_padding"
+                    android:singleLine="true"
+                    android:hint="Enter query details"
+                    android:maxLines="1"
+                    android:textColor="@color/dark"
+                    android:background="@drawable/enroll_round_background">
+
+                </EditText>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/new_ticket_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/h6"
+                android:adjustViewBounds="true"
+                android:background="@drawable/square_greystroke"
+                android:maxWidth="100sp"
+                android:padding="2dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="10">
+
+                <Button
+                    android:id="@+id/browseImg"
+                    android:layout_width="@dimen/big_image_height"
+                    android:layout_height="@dimen/noraml_btn_height"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="@drawable/button_style"
+                    android:text="Browse Image"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_marginRight="10dp" />
+
+                <Button
+                    android:id="@+id/query_submit"
+                    android:layout_width="@dimen/big_image_height"
+                    android:layout_height="@dimen/noraml_btn_height"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="@drawable/button_style"
+                    android:text="SUBMIT"
+                    android:textColor="@color/colorAccent" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

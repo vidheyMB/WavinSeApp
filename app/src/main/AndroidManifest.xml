@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.loyaltyworks.wavinseapp">
+
+
+    <application
+        android:name=".ApplicationClass"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Wavin_Android"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ui.ForceUpdateAndMaintenance.MaintenanceActivity"
+            android:theme="@style/Theme.Wavin_Android.NoActionBar"/>
+        <activity android:name=".ui.ForceUpdateAndMaintenance.ForceUpdateActivity"
+            android:theme="@style/Theme.Wavin_Android.NoActionBar"/>
+        <activity
+            android:name=".ui.usermapping.UserMappingActivity"
+            android:label="User mapping &amp; Enrollment report"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Wavin_Android" />
+        <activity
+            android:name=".ui.enrollment.productAndVoucher.ProductActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.enrollment.EnrollmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Wavin_Android.NoActionBar"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".ui.notification.NotificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Wavin_Android.NoActionBar" />
+        <activity
+            android:name=".ui.notification.HistoryNotificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Wavin_Android.NoActionBar" />
+        <activity
+            android:name=".ui.splashscreen.SplashScreenActivity"
+            android:theme="@style/Theme.Wavin_Android.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Wavin_Android.NoActionBar" />
+        <activity
+            android:name=".DashboardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Wavin_Android.NoActionBar"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+
+        <service
+            android:name=".utils.service.MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

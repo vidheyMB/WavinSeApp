@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/product_navigation"
+    app:startDestination="@id/productFragment">
+
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.productAndVoucher.productList.ProductFragment"
+        android:label="Products"
+        tools:layout="@layout/product_fragment">
+        <action
+            android:id="@+id/action_productFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.productAndVoucher.productDetails.ProductDetailsFragment"
+        android:label="Product details"
+        tools:layout="@layout/product_details_fragment" />
+
+    <fragment
+        android:id="@+id/shippingAddressFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.productAndVoucher.shippingAddress.ShippingAddressFragment"
+        android:label="Shipping address"
+        tools:layout="@layout/shipping_address_fragment">
+        <action
+            android:id="@+id/action_shippingAddressFragment_to_OTPFragment"
+            app:destination="@id/OTPFragment" />
+        <action
+            android:id="@+id/action_shippingAddressFragment_to_editAddressFragment"
+            app:destination="@id/editAddressFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/OTPFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.productAndVoucher.shippingAddress.ShippingOTPFragment"
+        android:label="Checkout"
+        tools:layout="@layout/o_t_p_fragment" />
+    <fragment
+        android:id="@+id/editAddressFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.productAndVoucher.shippingAddress.EditAddressFragment"
+        android:label="Edit address"
+        tools:layout="@layout/edit_address_fragment">
+        <action
+            android:id="@+id/action_editAddressFragment_to_OTPFragment"
+            app:destination="@id/OTPFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myCartFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.productAndVoucher.myCart.MyCartFragment"
+        android:label="My cart"
+        tools:layout="@layout/my_cart_fragment">
+        <action
+            android:id="@+id/action_myCartFragment_to_shippingAddressFragment"
+            app:destination="@id/shippingAddressFragment" />
+    </fragment>
+
+</navigation>

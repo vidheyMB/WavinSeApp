@@ -1,0 +1,232 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:id="@+id/asmse_framelayout"
+android:clickable="true"
+android:background="@color/backgorund_lyt_gray"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+tools:context=".ui.enrollment.ASMMaping.RetailerMappingFragment">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgorund_lyt_gray"
+        android:orientation="vertical"
+        android:layout_weight="9"
+        android:padding="@dimen/size10">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:text="Note: Customer city is mandatory in general tab!"
+            android:textStyle="italic"
+            android:textAlignment="center"
+            android:layout_margin="@dimen/activity_vertical_small_margin"
+            android:textColor="@color/c"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:textColor="@color/textview_grey"
+                android:text="Distributors" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_back_rect_box"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <Spinner
+                    android:id="@+id/mapping_branch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/big_margin"
+                    android:layout_weight="10"
+                    android:background="@color/transparent"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:spinnerMode="dialog" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_arrow_drop_down_black_24dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beat"
+                android:textColor="@color/textview_grey"
+                android:layout_gravity="left"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_back_rect_box"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <Spinner
+                    android:id="@+id/asm_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/big_margin"
+                    android:layout_weight="10"
+                    android:background="@color/transparent"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:spinnerMode="dialog" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_arrow_drop_down_black_24dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Retailer"
+                android:textColor="@color/textview_grey"
+                android:layout_gravity="left"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_back_rect_box"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <!--           <Spinner
+                               android:id="@+id/se_spinner"
+                               android:layout_width="wrap_content"
+                               android:layout_height="@dimen/big_margin"
+                               android:layout_weight="10"
+                               android:background="@color/transparent"
+                               android:paddingLeft="@dimen/small_padding"
+                               android:spinnerMode="dialog" />-->
+
+
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/se_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/big_margin"
+                    android:layout_weight="10"
+                    android:background="@color/transparent"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:spinnerMode="dialog"
+                    app:hintText="Select Retailer" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_arrow_drop_down_black_24dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/mapping_submit"
+            android:layout_width="@dimen/big_image_height"
+            android:layout_height="@dimen/noraml_btn_height"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_style"
+            android:text="SUBMIT"
+            android:textColor="@color/colorAccent" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10"
+            android:layout_marginTop="@dimen/activity_vertical_small_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:textColor="@color/textview_grey"
+
+                android:text="RETAILER MAPPING" />
+
+            <Button
+                android:layout_width="@dimen/icon_mid_image"
+                android:layout_height="@dimen/activity_horizontal_margin"
+                android:text="ADD"
+                android:id="@+id/button_add"
+                android:textSize="@dimen/h4"
+                android:background="@color/dark_grey"/>
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="visible"
+            android:id="@+id/retailer_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <!-- <Button
+         android:id="@+id/mapping_submit"
+         android:layout_width="@dimen/big_image_height"
+         android:layout_height="@dimen/noraml_btn_height"
+         android:layout_gravity="center"
+         android:background="@drawable/button_style"
+         android:text="SUBMIT"
+         android:textColor="@color/colorAccent" />-->
+
+</LinearLayout>
+
+</FrameLayout>

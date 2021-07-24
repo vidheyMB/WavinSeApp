@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_header_view"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@color/primary_color"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="10"
+        android:layout_gravity="center"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="right"
+            android:weightSum="10">
+
+
+            <ImageView
+                android:id="@+id/profile_img"
+                android:layout_width="@dimen/icon_image"
+                android:layout_height="@dimen/icon_image"
+                app:srcCompat="@drawable/ic_profile_white"
+                android:background="@drawable/profile_round_bg"
+                android:padding="@dimen/activity_vertical_margin" />
+
+            <TextView
+                android:id="@+id/version_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XXX"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="10"
+                android:textColor="@color/light_white"
+                android:textSize="@dimen/h4"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="top"
+            >
+            <TextView
+                android:id="@+id/menu_name_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mr. XXXX"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h2"
+
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+            <TextView
+                android:id="@+id/menu_loyaty_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Membership ID xx-xxxx-xxxx"
+                android:textSize="@dimen/h3"
+                android:textColor="@color/white"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="left"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="@dimen/activity_vertical_margin"
+                    android:layout_height="@dimen/activity_vertical_margin"
+                    app:srcCompat="@drawable/ic_mail"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:id="@+id/menu_mem_mail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/h3"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/small_padding"
+                    android:text="xxx"
+
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

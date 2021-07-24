@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    tools:context=".ui.enrollment.business.BusinessFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/backgorund_lyt_gray"
+            android:orientation="vertical"
+            android:padding="@dimen/txt">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FIRM NAME"
+
+                        android:textColor="@color/textview_grey" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/buss_fname"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/big_margin"
+                    android:background="@drawable/enroll_round_background"
+                    android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:nextFocusForward="@id/buss_add"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:textSize="13sp"
+                    android:paddingStart="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/dark" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="FIRM ADDRESS"
+                        android:textColor="@color/textview_grey" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/buss_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/big_margin"
+                    android:background="@drawable/enroll_round_background"
+                    android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ#-,/0123456789"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:nextFocusForward="@id/buss_pincode"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:singleLine="true"
+                    android:textSize="13sp"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/dark" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:textColor="@color/textview_grey"
+                    android:text="COUNTRY" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/enroll_round_background"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <Spinner
+                        android:id="@+id/buss_country"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/big_margin"
+                        android:layout_weight="10"
+                        android:background="@color/transparent"
+                        android:paddingLeft="@dimen/small_padding"
+                        android:spinnerMode="dialog" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_arrow_drop_down_black_24dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="STATE"
+                    android:textColor="@color/textview_grey" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/enroll_round_background"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <Spinner
+                        android:id="@+id/buss_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/big_margin"
+                        android:layout_weight="10"
+                        android:background="@color/transparent"
+                        android:paddingLeft="@dimen/small_padding"
+                        android:spinnerMode="dialog" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_arrow_drop_down_black_24dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="CITY"
+                    android:textColor="@color/textview_grey" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/enroll_round_background"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <Spinner
+                        android:id="@+id/buss_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/big_margin"
+                        android:layout_weight="10"
+                        android:background="@color/transparent"
+                        android:paddingLeft="@dimen/small_padding"
+                        android:spinnerMode="dialog" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_arrow_drop_down_black_24dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="PINCODE"
+                        android:textColor="@color/textview_grey" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/buss_pincode"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/big_margin"
+                    android:background="@drawable/enroll_round_background"
+                    android:textSize="13sp"
+                    android:paddingStart="15dp"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:maxLines="1"
+                    android:nextFocusForward="@id/buss_mobile"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:singleLine="true"
+                    android:textColor="@color/dark" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="left"
+                    android:text="FIRM MOBILE NUMBER"
+                    android:textColor="@color/textview_grey" />
+
+
+                <EditText
+                    android:id="@+id/buss_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/big_margin"
+                    android:background="@drawable/enroll_round_background"
+                    android:textSize="13sp"
+                    android:paddingStart="15dp"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:nextFocusForward="@id/buss_firm_email"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:singleLine="true"
+                    android:textColor="@color/dark" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="FIRM EMAIL ID"
+                        android:textColor="@color/textview_grey" />
+
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/buss_firm_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/big_margin"
+                    android:background="@drawable/enroll_round_background"
+                    android:textSize="13sp"
+                    android:paddingStart="15dp"
+                    android:digits="abcdefghijklmnopqrstuvwxyz@#_-,.0123456789"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+
+                    android:maxLines="1"
+                    android:nextFocusForward="@id/buss_firm_phone"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:singleLine="true"
+                    android:textColor="@color/dark" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="FIRM PHONE NO"
+                        android:textColor="@color/textview_grey" />
+
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/buss_firm_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/big_margin"
+                    android:background="@drawable/enroll_round_background"
+                    android:textSize="13sp"
+                    android:paddingStart="15dp"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:nextFocusForward="@id/buss_STD"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:singleLine="true"
+                    android:textColor="@color/dark" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="left"
+                    android:text="FIRM STD CODE"
+                    android:textColor="@color/textview_grey" />
+
+                <EditText
+                    android:id="@+id/buss_STD"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/big_margin"
+                    android:background="@drawable/enroll_round_background"
+                    android:textSize="13sp"
+                    android:paddingStart="15dp"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:maxLines="1"
+                    android:nextFocusForward="@id/buss_firm_size"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:singleLine="true"
+                    android:textColor="@color/dark" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="FIRM TYPE"
+                        android:textColor="@color/textview_grey" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/enroll_round_background"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <Spinner
+                        android:id="@+id/buss_firm_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/big_margin"
+                        android:layout_weight="10"
+                        android:background="@color/transparent"
+                        android:paddingLeft="@dimen/small_padding"
+                        android:spinnerMode="dialog" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_arrow_drop_down_black_24dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="FIRM SIZE"
+                        android:textColor="@color/textview_grey" />
+
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/buss_firm_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/big_margin"
+                    android:background="@drawable/enroll_round_background"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:textSize="13sp"
+                    android:paddingStart="15dp"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:singleLine="true"
+                    android:textColor="@color/dark" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="TYPES OF JOB UNDERTAKEN"
+                        android:textColor="@color/textview_grey" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/enroll_round_background"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <Spinner
+                        android:id="@+id/buss_job"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/big_margin"
+                        android:layout_weight="10"
+                        android:background="@color/transparent"
+                        android:paddingLeft="@dimen/small_padding"
+                        android:spinnerMode="dialog" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_arrow_drop_down_black_24dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/buss_submit"
+                android:layout_width="@dimen/big_image_height"
+                android:layout_height="@dimen/noraml_btn_height"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/button_style"
+                android:text="SUBMIT"
+                android:textColor="@color/colorAccent" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

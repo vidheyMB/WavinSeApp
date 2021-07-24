@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/points"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/light_blue_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"
+            android:text="Redeemable Balance" />
+
+        <TextView
+            android:id="@+id/redeemable_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:text="-" />
+
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cartRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/points"
+        android:layout_above="@+id/minimum_value"
+        android:padding="5dp"
+        app:spanCount="2"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <TextView
+        android:id="@+id/minimum_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Minimum redemption value should be 500"
+        android:layout_marginStart="20dp"
+        android:layout_above="@+id/checkout_btn"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/checkout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_margin="15dp"
+        android:background="@drawable/button_bg_grey"
+        android:layout_alignParentBottom="true"
+        android:text="Check out"/>
+
+    <!--No data found-->
+    <LinearLayout
+        android:id="@+id/mEmptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/empty_cart"
+            android:backgroundTint="@color/white"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Your Cart is Empty"
+            android:textColor="#153E8E"
+            android:textSize="@dimen/h3"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

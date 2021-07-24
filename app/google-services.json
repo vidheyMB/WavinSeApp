@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "981401663849",
+    "project_id": "wavin-5881e",
+    "storage_bucket": "wavin-5881e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981401663849:android:e868ceeb1b9b1016b525f8",
+        "android_client_info": {
+          "package_name": "com.loyaltyworks.wavinapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "981401663849-iljh9cqa7agiog93ku3gg3bfmn6pqfq9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAt0K2pSUjh-PRFQ1w79DYcR_hzPi9ly0c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "981401663849-iljh9cqa7agiog93ku3gg3bfmn6pqfq9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981401663849:android:f4db3364e71971fab525f8",
+        "android_client_info": {
+          "package_name": "com.loyaltyworks.wavinseapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "981401663849-iljh9cqa7agiog93ku3gg3bfmn6pqfq9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAt0K2pSUjh-PRFQ1w79DYcR_hzPi9ly0c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "981401663849-iljh9cqa7agiog93ku3gg3bfmn6pqfq9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

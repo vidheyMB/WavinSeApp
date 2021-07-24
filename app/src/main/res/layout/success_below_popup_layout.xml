@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/square_shape_white"
+    android:orientation="vertical"
+    android:gravity="bottom">
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="@dimen/h4"
+        android:layout_gravity="center"
+        android:src="@drawable/sucess_img"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#30000017"/>
+    <TextView
+        android:id="@+id/approved"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="Thankyou..."
+        android:textColor="#49C160"/>
+
+    <TextView
+        android:id="@+id/textDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:text="Your Product has successfully redeemed"
+        android:textColor="#78A0CB"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/textNo"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:layout_margin="@dimen/h4"
+            android:background="@drawable/square_shape_grey_stroke"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="NO"
+            android:textColor="@color/primary_dark_blue"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/textOk"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/h4"
+            android:layout_marginEnd="@dimen/h4"
+            android:layout_marginTop="@dimen/h4"
+            android:layout_marginBottom="@dimen/h4"
+            android:background="@drawable/square_shape_white"
+            android:backgroundTint="#153E8E"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Yes"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

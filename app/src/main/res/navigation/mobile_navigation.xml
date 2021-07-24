@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.loyaltyworks.wavinseapp.ui.dashboard.DashboardFragment"
+        android:label=""
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_nav_home_to_selectedRetailerDetailFragment2"
+            app:destination="@id/selectedRetailerDetailFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_retailerOrderRequestFragment2"
+            app:destination="@id/retailerOrderRequestFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_redemptionStatusFragment"
+            app:destination="@id/redemptionStatusFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_plumberRetailerQueryFragment"
+            app:destination="@id/plumberRetailerQueryFragment" />
+
+        <action
+            android:id="@+id/action_confirmationFragment_to_secondActivity"
+            app:destination="@id/UserMappinActivity" />
+        <action
+            android:id="@+id/action_nav_home_to_logoutFragment"
+            app:destination="@id/logout" />
+
+    </fragment>
+
+    <activity
+        android:id="@+id/UserMappinActivity"
+        android:name="com.loyaltyworks.wavinseapp.ui.usermapping.UserMappingActivity"
+        android:label="User mapping &amp; Enrollment report"
+        tools:layout="@layout/activity_user_mapping" />
+
+    <fragment
+        android:id="@+id/selectedRetailerDetailFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.selected_retailer_details.SelectedRetailerDetailFragment"
+        android:label="selected_retailer_detail_fragment"
+        tools:layout="@layout/selected_retailer_detail_fragment" />
+
+    <fragment
+        android:id="@+id/retailerOrderRequestFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.retailerorderrequest.RetailerOrderRequestFragment"
+        android:label="Retailer order request"
+        tools:layout="@layout/retailer_order_request_fragment">
+        <action
+            android:id="@+id/action_retailerOrderRequestFragment_to_retailerOrderRequestDetailsFragment"
+            app:destination="@id/retailerOrderRequestDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/retailerOrderRequestDetailsFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.retailerorderrequest.RetailerOrderRequestDetailsFragment"
+        android:label="Retailer order request"
+        tools:layout="@layout/fragment_retailer_order_request_details" />
+
+    <fragment
+        android:id="@+id/redemptionStatusFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.redemptionstatus.RedemptionStatusFragment"
+        android:label="Redemption status"
+        tools:layout="@layout/fragment_redemption_status" />
+
+    <fragment
+        android:id="@+id/plumberRetailerQueryFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.plumberretailerquery.PlumberRetailerQueryFragment"
+        android:label="Distributor &amp; Retailer Query"
+        tools:layout="@layout/fragment_plumber_retailer_query">
+        <action
+            android:id="@+id/action_plumberRetailerQueryFragment_to_plumberRetailerQueryChatFragment"
+            app:destination="@id/plumberRetailerQueryChatFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/plumberRetailerQueryChatFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.plumberretailerquery.PlumberRetailerQueryChatFragment"
+        android:label=""
+        tools:layout="@layout/fragment_plumber_retailer_query_chat" />
+    <fragment
+        android:id="@+id/logout"
+        android:name="com.loyaltyworks.wavinseapp.ui.logout.LogoutFragment"
+        android:label="Logout"
+        tools:layout="@layout/logout_fragment" />
+
+
+</navigation>

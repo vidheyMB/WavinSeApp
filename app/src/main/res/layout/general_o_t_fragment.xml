@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.mobile_no_verification.GeneralOTPFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/colorPrimaryLight"
+            android:gravity="center"
+            android:layout_weight="3">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:layout_marginTop="50dp"
+                android:text="OTP verification"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginTop="50dp"
+                android:text="Enter OTP"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:text="We just sent you to your mobile number"/>
+
+            <in.aabhasjindal.otptextview.OtpTextView
+                android:id="@+id/otp_view"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/h3"
+                android:textColor="@color/black"
+                app:otp_box_background="@color/fade_white"
+                app:height="40dp"
+                app:width="40dp"
+                app:bar_enabled="true"
+                app:bar_height="2dp"
+                app:length="6"
+                app:otp_text_size="16dp"/>
+
+            <Button
+                android:id="@+id/verify"
+                android:layout_width="260dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/h3"
+                android:layout_gravity="center"
+                android:background="@drawable/button_bg"
+                android:fontFamily="@font/futura_bold_font"
+                android:text="Verify"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h3" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

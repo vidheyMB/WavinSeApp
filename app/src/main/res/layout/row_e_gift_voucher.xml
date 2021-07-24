@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/h6"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/h7"
+            android:gravity="center"
+            android:background="@drawable/square_shape"
+            android:backgroundTint="#F9F9F9">
+            <ImageView
+                android:id="@+id/voucher_image"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="@dimen/h7"
+                android:padding="@dimen/h7"
+                android:src="@android:drawable/ic_menu_gallery"/>
+            <TextView
+                android:id="@+id/voucher_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XXXXXXXX"
+                android:singleLine="true"
+                android:lines="1"
+                android:ellipsize="end"
+                android:layout_gravity="center"
+                android:textColor="#162D3F"
+                android:textSize="12sp"
+               />
+            <TextView
+                android:id="@+id/voucher_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XXXXXXXX"
+                android:layout_gravity="center"
+                android:textColor="#8E9091"
+                android:textSize="12sp"
+               />
+
+                <Spinner
+                    android:id="@+id/mng_price_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:visibility="gone"
+                    android:background="@drawable/square_shape_grey_stroke"
+                    android:layout_margin="@dimen/h5"/>
+
+            <EditText
+                android:id="@+id/amount"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:hint="Enter Amount"
+                android:visibility="gone"
+                android:inputType="number"
+                android:maxLength="6"
+                android:background="@drawable/square_shape_grey_stroke"
+                android:textSize="12sp"
+                android:paddingStart="@dimen/h7"
+                android:layout_margin="4dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/redeem"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Redeem"
+            android:textAllCaps="false"
+           
+            android:background="@drawable/square_shape"
+            android:backgroundTint="#153E8E"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="10dp"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

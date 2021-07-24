@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/filterDisplay"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/bg_sample_"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_vertical_margin"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="5"
+            android:background="@color/lightBlurBlue"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/small_padding"
+            android:paddingBottom="@dimen/small_padding">
+
+            <ImageView
+                android:layout_width="@dimen/activity_horizontal_margin"
+                android:layout_height="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:padding="@dimen/appbar_padding_top"
+                app:srcCompat="@drawable/ic_date"
+                tools:ignore="VectorDrawableCompat" />
+
+
+            <TextView
+                android:id="@+id/fromDateEdt"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/small_padding"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/activity_vertical_small_margin"
+                android:text="From Date"
+                android:textSize="@dimen/h4" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="5"
+            android:background="@color/lightBlurBlue"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/small_padding"
+            android:paddingBottom="@dimen/small_padding">
+
+            <ImageView
+                android:layout_width="@dimen/activity_horizontal_margin"
+                android:layout_height="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:padding="@dimen/appbar_padding_top"
+                app:srcCompat="@drawable/ic_date"
+                tools:ignore="VectorDrawableCompat" />
+
+
+            <TextView
+                android:id="@+id/toDateEdt"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/small_padding"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/activity_vertical_small_margin"
+                android:text="To Date"
+                android:textSize="@dimen/h4" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/small_padding"
+            android:paddingBottom="@dimen/small_padding">
+
+
+            <Button
+                android:id="@+id/resetBtn"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="120dip"
+                android:layout_height="@dimen/icon_dimen"
+                android:layout_gravity="center"
+                android:background="@drawable/button_style"
+                android:elevation="@dimen/small_padding"
+                android:text="Reset"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/h4"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/small_padding"
+            android:paddingBottom="@dimen/small_padding">
+
+            <Button
+                android:id="@+id/filterBtn"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="120dip"
+                android:layout_height="@dimen/icon_dimen"
+                android:layout_gravity="center"
+                android:background="@drawable/button_style"
+                android:elevation="@dimen/small_padding"
+                android:text="FILTER"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/h4"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

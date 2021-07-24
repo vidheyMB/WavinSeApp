@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.enrollment.retailer_query.RetailerSupportFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/query_filterDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:weightSum="10">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:visibility="gone"
+                    android:weightSum="10">
+
+
+                    <!-- From Date -->
+                    <RelativeLayout
+                        android:id="@+id/fromDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/from_date_parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="From Date"
+                                android:textColor="@android:color/black"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/fromDate_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:text="DD/MM/YYYY"
+                                android:textColor="@color/primary_color"
+                                android:textSize="18sp"
+                                android:visibility="visible" />
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#E3E3E3" />
+
+                    <!-- To Date -->
+
+                    <RelativeLayout
+                        android:id="@+id/toDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/to_date_parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="To Date"
+                                android:textColor="@android:color/black"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/toDate_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:text="DD/MM/YYYY"
+                                android:textColor="@color/primary_color"
+                                android:textSize="18sp"
+                                android:visibility="visible" />
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5">
+
+
+                        <Spinner
+                            android:id="@+id/select_topic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_weight="10"
+                            android:paddingStart="10dp"
+                            android:backgroundTint="@color/grey"
+                            android:paddingLeft="@dimen/small_padding"
+                            android:spinnerMode="dropdown" />
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/select_topic"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="#CFCFCF" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5">
+
+
+                        <Spinner
+                            android:id="@+id/select_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_weight="10"
+                            android:paddingStart="10dp"
+                            android:backgroundTint="@color/grey"
+                            android:paddingLeft="@dimen/small_padding"
+                            android:spinnerMode="dropdown" />
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/select_status"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="#CFCFCF" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/filterBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        app:cardCornerRadius="10dp">
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/oval_shape_bluebg"
+                            android:gravity="center"
+                            android:paddingStart="8dp"
+                            android:paddingTop="7dp"
+                            android:paddingEnd="8dp"
+                            android:paddingBottom="7dp"
+                            android:text="Filter"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/new_ticket_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/profile_height"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/query_list_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:visibility="visible"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/query_listing_element" />
+
+                <TextView
+                    android:id="@+id/query_error_hint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="10"
+                    android:gravity="center"
+                    android:text="No Lodge Query found!\nPlease click on + to add lodge query..."
+                    android:textAlignment="center"
+                    android:textColor="@color/primary_color"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/lodge_query_img"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="bottom"
+                android:layout_margin="16dp"
+                app:layout_constraintVertical_bias="1"
+                android:backgroundTint="@color/primary_color"
+                android:src="@drawable/new_ticket_img"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/new_ticket_ll" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</FrameLayout>

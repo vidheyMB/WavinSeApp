@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/enrollment_navigation_graph"
+    app:startDestination="@id/selectedRetailerDetailFragment">
+
+    <fragment
+        android:id="@+id/selectedRetailerDetailFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.selected_retailer_details.SelectedRetailerDetailFragment"
+        android:label="Enrollment"
+        tools:layout="@layout/selected_retailer_detail_fragment">
+        <action
+            android:id="@+id/action_selectedRetailerDetailFragment_to_retailerEarningFragment"
+            app:destination="@id/retailerEarningFragment" />
+        <action
+            android:id="@+id/action_selectedRetailerDetailFragment_to_retailerPromotionFragment"
+            app:destination="@id/retailerPromotionFragment" />
+        <action
+            android:id="@+id/action_selectedRetailerDetailFragment_to_retailerRedemptionFragment"
+            app:destination="@id/retailerRedemptionFragment" />
+        <action
+            android:id="@+id/action_selectedRetailerDetailFragment_to_reatilerDreamGiftFragment"
+            app:destination="@id/reatilerDreamGiftFragment" />
+
+        <action
+            android:id="@+id/action_selectedRetailerDetailFragment_to_personalFragment"
+            app:destination="@id/personalFragment" />
+        <action
+            android:id="@+id/action_selectedRetailerDetailFragment_to_identificationFragment"
+            app:destination="@id/identificationFragment" />
+        <action
+            android:id="@+id/action_selectedRetailerDetailFragment_to_businessFragment"
+            app:destination="@id/businessFragment" />
+        <action
+            android:id="@+id/action_selectedRetailerDetailFragment_to_retailerSupportFragment"
+            app:destination="@id/retailerSupportFragment" />
+        <action
+            android:id="@+id/action_selectedRetailerDetailFragment_to_retailerMappingFragment"
+            app:destination="@id/retailerMappingFragment" />
+        <action
+            android:id="@+id/action_selectedRetailerDetailFragment_to_MyWishListFragment"
+            app:destination="@id/MyWishListFragment" />
+        <action
+            android:id="@+id/action_selectedRetailerDetailFragment_to_selectRedemptionFragment"
+            app:destination="@id/selectRedemptionFragment" />
+        <action
+            android:id="@+id/action_selectedRetailerDetailFragment_to_mobileNumberVerificationFragment"
+            app:destination="@id/mobileNumberVerificationFragment" />
+        <action
+            android:id="@+id/action_selectedRetailerDetailFragment_to_generalFragment"
+            app:destination="@id/generalFragment" />
+        <action
+            android:id="@+id/action_selectedRetailerDetailFragment_to_memberStatusFragment"
+            app:destination="@id/memberStatusFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/generalFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.general.GeneralFragment"
+        android:label="General"
+        tools:layout="@layout/general_fragment">
+        <action
+            android:id="@+id/action_generalFragment_to_selectedRetailerDetailFragment"
+            app:destination="@id/selectedRetailerDetailFragment"
+            app:popUpTo="@id/selectedRetailerDetailFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/businessFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.business.BusinessFragment"
+        android:label="Business"
+        tools:layout="@layout/business_fragment" />
+    <fragment
+        android:id="@+id/personalFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.personal.PersonalFragment"
+        android:label="Personal"
+        tools:layout="@layout/personal_fragment" />
+    <fragment
+        android:id="@+id/identificationFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.identification.IdentificationFragment"
+        android:label="Identification"
+        tools:layout="@layout/identification_fragment" />
+
+    <fragment
+        android:id="@+id/retailerMappingFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.ASMMaping.RetailerMappingFragment"
+        android:label=""
+        tools:layout="@layout/retailer_mapping_fragment" />
+
+
+    <fragment
+        android:id="@+id/reatilerDreamGiftFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.retailer_dreamgift.ReatilerDreamGiftFragment"
+        android:label="Dream gift"
+        tools:layout="@layout/reatiler_dream_gift_fragment">
+        <action
+            android:id="@+id/action_reatilerDreamGiftFragment_to_retailerDreamGiftDetailFragment"
+            app:destination="@id/retailerDreamGiftDetailFragment" />
+        <action
+            android:id="@+id/action_reatilerDreamGiftFragment_to_addDreamGiftFragment"
+            app:destination="@id/addDreamGiftFragment" />
+
+        <action
+            android:id="@+id/action_myDreamGiftFragment_to_shippingAddressFragment"
+            app:destination="@id/shippingAddressFragment" />
+        <action
+            android:id="@+id/action_reatilerDreamGiftFragment_to_shippingAddressFragment"
+            app:destination="@id/shippingAddressFragment" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/addDreamGiftFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.retailer_dreamgift.AddDreamGiftFragment"
+        android:label="Add dream gift"
+        tools:layout="@layout/fragment_add_dream_gift" />
+
+
+    <fragment
+        android:id="@+id/retailerDreamGiftDetailFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.retailer_dreamgift.RetailerDreamGiftDetailFragment"
+        android:label="Dream gift details"
+        tools:layout="@layout/retailer_dream_gift_detail_fragment" >
+        <action
+            android:id="@+id/action_retailerDreamGiftDetailFragment_to_shippingAddressFragment"
+            app:destination="@id/shippingAddressFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/newTicketFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.retailer_query.NewTicketFragment"
+        android:label="New Ticket"
+        tools:layout="@layout/new_ticket_fragment" />
+    <fragment
+        android:id="@+id/queryChatFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.retailer_query.QueryChatFragment"
+        android:label="Retailer Query"
+        tools:layout="@layout/query_chat_fragment" />
+    <fragment
+        android:id="@+id/retailerSupportFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.retailer_query.RetailerSupportFragment"
+        android:label="Retailer Query"
+        tools:layout="@layout/retailer_support_fragment">
+        <action
+            android:id="@+id/action_retailerSupportFragment_to_queryChatFragment"
+            app:destination="@id/queryChatFragment" />
+        <action
+            android:id="@+id/action_retailerSupportFragment_to_newTicketFragment"
+            app:destination="@id/newTicketFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/retailerRedemptionFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.retailer_redemption.RetailerRedemptionFragment"
+        android:label="Member Redemptions"
+        tools:layout="@layout/retailer_redemption_fragment" />
+    <fragment
+        android:id="@+id/retailerPromotionFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.reatiler_promotion.RetailerPromotionFragment"
+        android:label="Offers &amp; Promotions"
+        tools:layout="@layout/retailer_promotion_fragment">
+        <action
+            android:id="@+id/action_retailerPromotionFragment_to_promotionDetailFragment"
+            app:destination="@id/promotionDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/promotionDetailFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.reatiler_promotion.PromotionDetailFragment"
+        android:label="Offers &amp; Promotions"
+        tools:layout="@layout/promotion_detail_fragment" />
+    <fragment
+        android:id="@+id/retailerEarningFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.retailer_earning.RetailerEarningFragment"
+        android:label="Member Earning"
+        tools:layout="@layout/retailer_earning_fragment" />
+
+
+    <fragment
+        android:id="@+id/myWishListDetailsFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.wishlist.MyWishListDetailsFragment"
+        android:label="My wishlist details"
+        tools:layout="@layout/fragment_my_wish_llist_details">
+        <action
+            android:id="@+id/action_myWishListDetailsFragment_to_shippingAddressFragment"
+            app:destination="@id/shippingAddressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/MyWishListFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.wishlist.WishListFragment"
+        android:label="Wishlist"
+        tools:layout="@layout/wish_list_fragment">
+        <action
+            android:id="@+id/action_wishListFragment_to_myWishListDetailsFragment"
+            app:destination="@id/myWishListDetailsFragment" />
+        <action
+            android:id="@+id/action_MyWishListFragment_to_shippingAddressFragment"
+            app:destination="@id/shippingAddressFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/selectRedemptionFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.productAndVoucher.selectRedemption.SelectRedemptionFragment"
+        android:label=""
+        tools:layout="@layout/fragment_selecr_redemption">
+        <action
+            android:id="@+id/action_selectRedemptionFragment_to_voucherFragment"
+            app:destination="@id/voucherFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/voucherFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.productAndVoucher.voucher.VoucherFragment"
+        android:label="Voucher"
+        tools:layout="@layout/voucher_fragment">
+        <action
+            android:id="@+id/action_voucherFragment_to_voucherDialogFragment"
+            app:destination="@id/voucherDialogFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/voucherDialogFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.productAndVoucher.voucher.VoucherDialogFragment"
+        android:label="Voucher"
+        tools:layout="@layout/fragment_voucher_dialog_list_dialog" />
+
+
+    <fragment
+        android:id="@+id/shippingAddressFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.productAndVoucher.shippingAddress.ShippingAddressFragment"
+        android:label="Shipping address"
+        tools:layout="@layout/shipping_address_fragment">
+
+        <action
+            android:id="@+id/action_shippingAddressFragment_to_OTPFragment"
+            app:destination="@id/OTPFragment" />
+        <action
+            android:id="@+id/action_shippingAddressFragment_to_editAddressFragment"
+            app:destination="@id/editAddressFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/editAddressFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.productAndVoucher.shippingAddress.EditAddressFragment"
+        android:label="Edit address"
+        tools:layout="@layout/edit_address_fragment">
+        <action
+            android:id="@+id/action_editAddressFragment_to_OTPFragment"
+            app:destination="@id/OTPFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/OTPFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.productAndVoucher.shippingAddress.ShippingOTPFragment"
+        android:label="Checkout"
+        tools:layout="@layout/o_t_p_fragment">
+        <action
+            android:id="@+id/action_OTPFragment_to_nav_home"
+            app:destination="@id/nav_home"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/mobile_navigation"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_OTPFragment_to_selectedRetailerDetailFragment"
+            app:destination="@id/selectedRetailerDetailFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/enrollment_navigation_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/generalOTPFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.mobile_no_verification.GeneralOTPFragment"
+        android:label="General"
+        tools:layout="@layout/general_o_t_fragment">
+        <action
+            android:id="@+id/action_generalOTPFragment_to_generalFragment"
+            app:destination="@id/generalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mobileNumberVerificationFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.mobile_no_verification.MobileNumberVerificationFragment"
+        android:label="General"
+        tools:layout="@layout/mobile_number_verification_fragment">
+        <action
+            android:id="@+id/action_mobileNumberVerificationFragment_to_generalOTPFragment"
+            app:destination="@id/generalOTPFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/memberStatusFragment"
+        android:name="com.loyaltyworks.wavinseapp.ui.enrollment.member_status.MemberStatusFragment"
+        android:label="Member status"
+        tools:layout="@layout/member_status_fragment" />
+
+</navigation>

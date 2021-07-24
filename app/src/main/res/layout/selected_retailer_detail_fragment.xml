@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:scrollbars="none"
+    tools:context=".ui.enrollment.selected_retailer_details.SelectedRetailerDetailFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/info_host"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <include layout="@layout/member_list_row"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gridViewVerfiy"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_vertical_small_margin"
+            android:gravity="center"
+            android:layout_gravity="center"
+            >
+            <TextView
+                android:id="@+id/note_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:textAlignment="center"
+                android:visibility="gone"
+                android:text="Note: Start the enrollment process from general tab"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/h6" />
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/generalCard"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/grid_size"
+                    android:layout_height="@dimen/grid_size"
+                    card_view:cardBackgroundColor="@color/colorAccent"
+                    card_view:cardCornerRadius="@dimen/activity_horizontal_margin"
+                    android:layout_margin="@dimen/small_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        >
+                        <ImageView
+                            android:id="@+id/generalImg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/general"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/generalText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="GENERAL"
+                            android:textAlignment="center"
+                            android:layout_marginTop="@dimen/activity_vertical_small_margin"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/h5"
+                            android:textColor="#209AFF"
+                            android:gravity="center_horizontal" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/general_complete_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_check_complete"
+                        android:layout_gravity="right"
+                        android:visibility="gone"
+                        android:layout_margin="@dimen/small_padding"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/personalCard"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/grid_size"
+                    android:layout_height="@dimen/grid_size"
+                    card_view:cardBackgroundColor="@color/colorAccent"
+                    card_view:cardCornerRadius="@dimen/activity_horizontal_margin"
+                    android:layout_margin="@dimen/small_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        >
+                        <ImageView
+                            android:id="@+id/personalImg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitCenter"
+                            android:clickable="false"
+                            android:src="@drawable/person"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/personalText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="PERSONAL"
+                            android:textAlignment="center"
+                            android:layout_marginTop="@dimen/activity_vertical_small_margin"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/h5"
+                            android:textColor="#F99122"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/personal_complete_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_uncheck"
+                        android:layout_gravity="right"
+                        android:visibility="visible"
+                        android:layout_margin="@dimen/small_padding"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/identificationCard"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:layout_width="@dimen/grid_size"
+                    android:layout_height="@dimen/grid_size"
+                    card_view:cardBackgroundColor="@color/colorAccent"
+                    card_view:cardCornerRadius="@dimen/activity_horizontal_margin"
+                    android:layout_margin="@dimen/small_padding"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+                        <ImageView
+                            android:id="@+id/identificationImg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/identification"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/identificationText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="IDENTIFICATION PROOF"
+                            android:textAlignment="center"
+                            android:layout_marginTop="@dimen/activity_vertical_small_margin"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/h5"
+                            android:textColor="#969696"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/identity_complete_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_uncheck"
+                        android:layout_gravity="right"
+                        android:layout_margin="@dimen/small_padding"/>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+
+                <androidx.cardview.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/businessCard"
+                    android:visibility="visible"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/grid_size"
+                    android:layout_height="@dimen/grid_size"
+                    card_view:cardBackgroundColor="@color/colorAccent"
+                    card_view:cardCornerRadius="@dimen/activity_horizontal_margin"
+                    android:layout_margin="@dimen/small_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+                        <ImageView
+                            android:id="@+id/businessImg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/business"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/businessText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="BUSINESS"
+                            android:textAlignment="center"
+                            android:layout_marginTop="@dimen/activity_vertical_small_margin"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/h5"
+                            android:textColor="#424548"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/bussiness_complete_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_uncheck"
+                        android:layout_gravity="right"
+                        android:layout_margin="@dimen/small_padding"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/memberStatus"
+                    android:layout_gravity="center"
+                    android:visibility="visible"
+                    android:layout_width="@dimen/grid_size"
+                    android:layout_height="@dimen/grid_size"
+                    card_view:cardBackgroundColor="@color/colorAccent"
+                    card_view:cardCornerRadius="@dimen/activity_horizontal_margin"
+                    android:layout_margin="@dimen/small_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+                        <ImageView
+                            android:id="@+id/memberStatusImg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/mapping"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/memberStatusText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="MEMBER\nSTATUS"
+                            android:textAlignment="center"
+                            android:layout_marginTop="@dimen/activity_vertical_small_margin"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/h5"
+                            android:textColor="#CEBE63"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/member_status_complete_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_uncheck"
+                        android:layout_gravity="right"
+                        android:visibility="gone"
+                        android:layout_margin="@dimen/small_padding"/>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <androidx.cardview.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/mappingCard"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:layout_width="@dimen/grid_size"
+                    android:layout_height="@dimen/grid_size"
+                    card_view:cardBackgroundColor="@color/colorAccent"
+                    card_view:cardCornerRadius="@dimen/activity_horizontal_margin"
+                    android:layout_margin="@dimen/small_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+                        <ImageView
+                            android:id="@+id/mappingImg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/mapping"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/mappingText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="RETAILER\nMAPPING"
+                            android:textAlignment="center"
+                            android:layout_marginTop="@dimen/activity_vertical_small_margin"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/h5"
+                            android:textColor="#CEBE63"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/asm_se_complete_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_uncheck"
+                        android:layout_gravity="right"
+                        android:layout_margin="@dimen/small_padding"/>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/rewardsCard"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/grid_size"
+                    android:layout_height="@dimen/grid_size"
+                    android:visibility="gone"
+                    card_view:cardBackgroundColor="@color/colorAccent"
+                    card_view:cardCornerRadius="@dimen/activity_horizontal_margin"
+                    android:layout_margin="@dimen/small_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/ic_rewards"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="MEMBER EARNINGS"
+                            android:textAlignment="center"
+                            android:layout_marginTop="@dimen/activity_vertical_small_margin"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/h5"
+                            android:textColor="#E77E23"
+                            android:gravity="center" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <androidx.cardview.widget.CardView
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/redemptionCard"
+                        android:layout_gravity="center"
+                        android:layout_width="@dimen/grid_size"
+                        android:layout_height="@dimen/grid_size"
+                        card_view:cardBackgroundColor="@color/colorAccent"
+                        card_view:cardCornerRadius="@dimen/activity_horizontal_margin"
+                        android:layout_margin="@dimen/small_padding">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/ic_dash_redeem"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="MEMBER \nREDEMPTIONS"
+                                android:textAlignment="center"
+                                android:layout_marginTop="@dimen/activity_vertical_small_margin"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/h5"
+                                android:textColor="#CEBE63"
+                                android:gravity="center" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/promotionCard"
+                        android:layout_gravity="center"
+                        android:layout_width="@dimen/grid_size"
+                        android:layout_height="@dimen/grid_size"
+                        card_view:cardBackgroundColor="@color/colorAccent"
+                        card_view:cardCornerRadius="@dimen/activity_horizontal_margin"
+                        android:layout_margin="@dimen/small_padding">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/ic_dash_offer"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="MEMBER\nPROMOTIONS"
+                                android:textAlignment="center"
+                                android:layout_marginTop="@dimen/activity_vertical_small_margin"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/h5"
+                                android:textColor="#A75188"
+                                android:gravity="center" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/ticketCard"
+                        android:layout_gravity="center"
+                        android:layout_width="@dimen/grid_size"
+                        android:layout_height="@dimen/grid_size"
+                        card_view:cardBackgroundColor="@color/colorAccent"
+                        card_view:cardCornerRadius="@dimen/activity_horizontal_margin"
+                        android:layout_margin="@dimen/small_padding">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/ic_ticket_new"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Contact Us"
+                                android:textAlignment="center"
+                                android:layout_marginTop="@dimen/activity_vertical_small_margin"
+                                android:textStyle="bold"
+                                android:textAllCaps="true"
+                                android:textSize="@dimen/h5"
+                                android:textColor="#A75188"
+                                android:gravity="center" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/redemptionCatalogueCard"
+                        android:layout_gravity="center"
+                        android:layout_width="@dimen/grid_size"
+                        android:layout_height="@dimen/grid_size"
+                        card_view:cardBackgroundColor="@color/colorAccent"
+                        card_view:cardCornerRadius="@dimen/activity_horizontal_margin"
+                        android:layout_margin="@dimen/small_padding"
+                        android:visibility="visible"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/ic_product"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="REDEMPTION CATALOGUE"
+                                android:textAlignment="center"
+                                android:layout_marginTop="@dimen/activity_vertical_small_margin"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/h5"
+                                android:textColor="#299947"
+                                android:gravity="center" />
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/plannerCard"
+                        android:layout_gravity="center"
+                        android:layout_width="@dimen/grid_size"
+                        android:visibility="gone"
+                        android:layout_height="@dimen/grid_size"
+                        card_view:cardBackgroundColor="@color/colorAccent"
+                        card_view:cardCornerRadius="@dimen/activity_horizontal_margin"
+                        android:layout_margin="@dimen/small_padding">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center">
+                            <ImageView
+                                android:id="@+id/plannerImg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/ic_planner"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/plannerText"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="WISHLIST"
+                                android:textAlignment="center"
+                                android:layout_marginTop="@dimen/activity_vertical_small_margin"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/h5"
+                                android:textColor="#424548"
+                                android:gravity="center" />
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/dream_giftCard"
+                        android:layout_gravity="center"
+                        android:visibility="visible"
+                        android:layout_width="@dimen/grid_size"
+                        android:layout_height="@dimen/grid_size"
+                        card_view:cardBackgroundColor="@color/colorAccent"
+                        card_view:cardCornerRadius="@dimen/activity_horizontal_margin"
+                        android:layout_margin="@dimen/small_padding"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            >
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/gifticon"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Dream Gift"
+                                android:textSize="@dimen/h5"
+                                android:textAllCaps="true"
+                                android:textAlignment="center"
+                                android:layout_marginTop="@dimen/small_padding"
+                                android:textStyle="bold"
+                                android:textColor="#2185FF"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

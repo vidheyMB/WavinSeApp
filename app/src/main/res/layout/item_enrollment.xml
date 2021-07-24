@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/small_padding"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/small_padding"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:weightSum="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_weight="3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    app:srcCompat="@drawable/ic_date"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/activity_vertical_margin"
+                    android:layout_height="@dimen/activity_vertical_margin"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/mem_list_date"
+                    android:textColor="@color/colorAccent"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_padding"
+                    android:textSize="@dimen/h5"
+                    android:text="DD/MM/YYYY" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pointtext"
+                android:visibility="gone"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:src="@drawable/money"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/activity_vertical_margin"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/mem_list_point"
+                    android:textColor="@color/colorAccent"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_padding"
+                    android:textSize="@dimen/h5"
+                    android:text="-" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:src="@drawable/tier"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/activity_vertical_margin"
+                    android:layout_height="@dimen/activity_vertical_margin" />
+
+                <TextView
+                    android:id="@+id/mem_list_tier"
+                    android:textColor="@color/colorAccent"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_padding"
+                    android:text="Bronze" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/active_status_host"
+                android:layout_weight="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/mem_list_activeImg"
+                    app:srcCompat="@drawable/ic_inactive"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/activity_vertical_margin"
+                    android:layout_height="@dimen/activity_vertical_margin"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/mem_list_status"
+                    android:textColor="@color/colorAccent"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_padding"
+                    android:textSize="@dimen/h5"
+                    android:text="active" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/mem_list_verifyImg"
+                    app:srcCompat="@drawable/ic_active"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/activity_vertical_margin"
+                    android:layout_height="@dimen/activity_vertical_margin"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/mem_list_approve"
+                    android:textColor="@color/colorAccent"
+                    android:layout_gravity="center"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_padding"
+                    android:textSize="@dimen/h5"
+                    android:text="verified" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_vertical_small_margin"
+            android:layout_weight="4"
+            android:orientation="horizontal"
+            android:background="@color/light_white"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                >
+
+                <ImageView
+                    android:id="@+id/general_profile_photo"
+                    android:layout_width="@dimen/noraml_btn_height"
+                    android:layout_height="@dimen/noraml_btn_height"
+                    app:srcCompat="@drawable/ic_person"
+                    android:background="@drawable/round_profile_bg"
+                    android:padding="@dimen/activity_vertical_small_margin"
+                    tools:ignore="VectorDrawableCompat" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_weight="4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="#808080"
+
+                    android:textSize="@dimen/h5"
+                    android:text="Name" />
+
+                <TextView
+                    android:id="@+id/mem_list_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="@dimen/h5"
+                    android:textColor="@color/primary_color"
+                    android:text="XXXXX" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_weight="3">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="#808080"
+                    android:textSize="@dimen/h5"
+                    android:text="Mobile Number" />
+
+                <TextView
+                    android:id="@+id/mem_list_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+
+                    android:textSize="@dimen/h5"
+                    android:textColor="@color/primary_color"
+                    android:text="xxxxx xxxxx" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/icon_image"
+            android:layout_weight="4"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:background="@color/membershipBlock_color"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="@dimen/h6"
+                        android:textColor="@color/colorAccent"
+                        android:text="Transcation Count" />
+                    <TextView
+                        android:id="@+id/mem_list_trxnCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/colorAccent"
+                        android:text="-" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"
+                android:background="@color/membershipBlock_color"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="@dimen/h6"
+                        android:textColor="@color/colorAccent"
+                        android:text="Points Earned" />
+
+                    <TextView
+                        android:id="@+id/mem_list_points"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+
+                        android:textColor="@color/colorAccent"
+                        android:text="-" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:background="@color/membershipBlock_color"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="@dimen/h6"
+                        android:textColor="@color/colorAccent"
+                        android:text=" Redemption Count" />
+                    <TextView
+                        android:id="@+id/mem_list_rdemptionCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/colorAccent"
+                        android:text="-" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:background="@color/membershipBlock_color"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="@dimen/h6"
+                        android:textColor="@color/colorAccent"
+                        android:text="Points Redeemed" />
+                    <TextView
+                        android:id="@+id/mem_list_pointsRedeemed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/colorAccent"
+                        android:text="-" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

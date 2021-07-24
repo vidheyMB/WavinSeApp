@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_my_dream_gift"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:paddingStart="3dp"
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/row_my_wish_list" />
+
+    <TextView
+        android:id="@+id/no_dream_gift_found"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="No Data Found !"
+        android:textColor="@color/red"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
+
+</FrameLayout>

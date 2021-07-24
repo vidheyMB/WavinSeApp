@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_dark_blue">#0161AA</color>
+    <color name="primary_color">#00B7F1</color>
+    <color name="secondary_blue">#0089F1</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#20AC4A</color>
+    <color name="red">#F44336</color>
+    <color name="text_grey">#5b5b5b</color>
+    <color name="line_grey">#DFDFDF</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#181818</color>
+    <color name="fade_white">#F8F8F8</color>
+    <color name="text_black">#4A4A4A</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="light_blue_bg">#EDF0F9</color>
+    <color name="tab_selected">#DEEFFF</color>
+    <color name="btn_stroke_color">#6ACFD8E1</color>
+    <color name="dark_grey">#999999</color>
+    <color name="light_dark">#3B4044</color>
+    <color name="dark">#000000</color>
+    <color name="textColorPrimary">#ccc</color>
+    <color name="textColorSecondary">#aaa</color>
+    <color name="light_white">#eeeeee</color>
+    <color name="membershipBlock_color">@color/primary_color</color>
+    <color name="spinWheel_color_bg">#01357E</color>
+    <color name="magicBox_color_bg">#AE750F</color>
+    <color name="button_color">@color/secondary_blue</color>
+    <color name="colorPrimaryLight">#3396CE</color>
+
+    <color name="backgorund_lyt_gray">#F1F1F1</color>
+    <color name="textview_grey">#868686</color>
+    <item name="c" type="color">#F39C11</item>
+    <color name="lightBlue">#B2DAF9</color>
+    <color name="colorGray">#888888</color>
+    <color name="colorDarkRed">#cc2424</color>
+    <color name="lightBlurBlue">#B6D8EC</color>
+
+</resources>

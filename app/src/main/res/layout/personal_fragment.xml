@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.enrollment.personal.PersonalFragment">
+
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:background="#F0F0F0">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:paddingTop="@dimen/activity_vertical_small_margin">
+
+       
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ADDRESS *"
+                        android:padding="4dp"
+                        android:textColor="@color/text_grey"/>
+                    <EditText
+                        android:id="@+id/per_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/noraml_btn_height"
+                        android:padding="@dimen/small_padding"
+                        android:singleLine="true"
+                        android:digits="abcdefghijklmnopqrstuvwxyz /ABCDEFGHIJKLMNOPQRSTUVWXYZ#-,0123456789"
+                        android:maxLines="1"
+                        android:nextFocusForward="@id/per_pin"
+                        android:imeOptions="actionNext"
+                        android:textColor="@color/dark"
+                        android:background="@drawable/enroll_round_background"/>
+                    
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="COUNTRY"
+                        android:padding="4dp"
+                        android:textColor="@color/text_grey"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:saveEnabled="false"
+                        android:background="@drawable/enroll_round_background"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <Spinner
+                            android:id="@+id/per_country_spinnerr"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/big_margin"
+                            android:layout_weight="10"
+                            android:saveEnabled="true"
+                            style="@style/SpinnerTheme"
+                            android:paddingLeft="@dimen/small_padding"
+                            android:spinnerMode="dialog" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="STATE *"
+                        android:padding="4dp"
+                        android:textColor="@color/text_grey"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/enroll_round_background"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <Spinner
+                            android:id="@+id/per_state_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/big_margin"
+                            android:layout_weight="10"
+                            style="@style/SpinnerTheme"
+                            android:paddingLeft="@dimen/small_padding"
+                            android:spinnerMode="dialog" />
+
+                        
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CITY"
+                        android:padding="4dp"
+                        android:textColor="@color/text_grey"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/enroll_round_background"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <Spinner
+                            android:id="@+id/per_city_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/big_margin"
+                            android:layout_weight="10"
+                            style="@style/SpinnerTheme"
+                            android:paddingLeft="@dimen/small_padding"
+                            android:spinnerMode="dialog" />
+
+                        
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DISTRICT"
+                        android:padding="4dp"
+                        android:textColor="@color/text_grey"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/enroll_round_background"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <Spinner
+                            android:id="@+id/per_district_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/big_margin"
+                            android:layout_weight="10"
+                            style="@style/SpinnerTheme"
+                            android:paddingLeft="@dimen/small_padding"
+                            android:spinnerMode="dialog" />
+
+                        
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DISTRICT*"
+                        android:padding="4dp"
+                        android:textColor="@color/text_grey"/>
+                    <EditText
+                        android:id="@+id/per_district"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/noraml_btn_height"
+                        android:padding="@dimen/small_padding"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:nextFocusForward="@id/per_pin"
+                        android:imeOptions="actionNext"
+                        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+                        android:textColor="@color/dark"
+                        android:background="@drawable/enroll_round_background"></EditText>
+
+
+                </LinearLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="PIN CODE*"
+                        android:padding="4dp"
+                        android:textColor="@color/text_grey"/>
+                    <EditText
+                        android:id="@+id/per_pin"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/noraml_btn_height"
+                        android:padding="@dimen/small_padding"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:imeOptions="actionDone"
+                        android:textColor="@color/dark"
+                        android:background="@drawable/enroll_round_background"/>
+
+
+                </LinearLayout>
+
+                <!-- <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
+                     android:paddingTop="8dp">
+ 
+                     <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="NATIVE COUNTRY"
+                         android:padding="4dp"
+                         android:textColor="@color/text_grey"/>
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/enroll_round_background"
+                         android:orientation="horizontal"
+                         android:weightSum="10">
+ 
+                         <Spinner
+                             android:id="@+id/per_native_country_spinner"
+                             android:layout_width="wrap_content"
+                             android:layout_height="@dimen/big_margin"
+                             android:layout_weight="10"
+                             style="@style/SpinnerTheme"
+                             android:paddingLeft="@dimen/small_padding"
+                             android:spinnerMode="dialog" />
+ 
+                         
+                     </LinearLayout>
+ 
+                 </LinearLayout>  -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="NATIVE STATE"
+                        android:padding="4dp"
+                        android:textColor="@color/text_grey"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/enroll_round_background"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <Spinner
+                            android:id="@+id/per_native_state_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/big_margin"
+                            android:layout_weight="10"
+                            style="@style/SpinnerTheme"
+                            android:paddingLeft="@dimen/small_padding"
+                            android:spinnerMode="dialog" />
+
+                        
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="BIRTHDAY"
+                        android:padding="4dp"
+                        android:textColor="@color/text_grey"/>
+                    <TextView
+                        android:id="@+id/per_birthday"
+                        android:layout_width="match_parent"
+                        android:hint="DD/MM/YYYY"
+                        android:textAlignment="textStart"
+                        android:gravity="start|center"
+                        android:padding="@dimen/small_padding"
+                        android:textColor="@color/dark"
+                        android:layout_height="@dimen/noraml_btn_height"
+                        android:clickable="true"
+                        android:background="@drawable/enroll_round_background">
+                    </TextView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ANNIVERSARY"
+                        android:padding="4dp"
+                        android:textColor="@color/text_grey"/>
+                    <TextView
+                        android:id="@+id/per_aniversary"
+                        android:layout_width="match_parent"
+                        android:hint="DD/MM/YYYY"
+                        android:textAlignment="textStart"
+                        android:gravity="start|center"
+                        android:padding="@dimen/small_padding"
+                        android:clickable="true"
+                        android:textColor="@color/dark"
+                        android:layout_height="@dimen/noraml_btn_height"
+                        android:background="@drawable/enroll_round_background">
+                    </TextView>
+
+                </LinearLayout>
+
+                <!-- <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
+                     android:paddingTop="8dp">
+ 
+                     <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="PROFESSION"
+                         android:padding="4dp"
+                         android:textColor="@color/text_grey"/>
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/enroll_round_background"
+                         android:orientation="horizontal"
+                         android:weightSum="10">
+ 
+                         <Spinner
+                             android:id="@+id/per_profession_spinner"
+                             android:layout_width="wrap_content"
+                             android:layout_height="@dimen/big_margin"
+                             android:layout_weight="10"
+                             style="@style/SpinnerTheme"
+                             android:paddingLeft="@dimen/small_padding"
+                             android:spinnerMode="dialog" />
+ 
+                         
+                     </LinearLayout>
+ 
+ 
+                 </LinearLayout>
+ 
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
+                     android:paddingTop="8dp">
+ 
+                     <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="AGE GROUP"
+                         android:padding="4dp"
+                         android:textColor="@color/text_grey"/>
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/enroll_round_background"
+                         android:orientation="horizontal"
+                         android:weightSum="10">
+ 
+                         <Spinner
+                             android:id="@+id/per_age_spinner"
+                             android:layout_width="wrap_content"
+                             android:layout_height="@dimen/big_margin"
+                             android:layout_weight="10"
+                             style="@style/SpinnerTheme"
+                             android:paddingLeft="@dimen/small_padding"
+                             android:spinnerMode="dialog" />
+ 
+                         
+                     </LinearLayout>
+ 
+ 
+                 </LinearLayout>
+ 
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
+                     android:paddingTop="8dp">
+ 
+                     <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="INCOME RANGE"
+                         android:padding="4dp"
+                         android:textColor="@color/text_grey"/>
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/enroll_round_background"
+                         android:orientation="horizontal"
+                         android:weightSum="10">
+ 
+                         <Spinner
+                             android:id="@+id/per_incom_spinner"
+                             android:layout_width="wrap_content"
+                             android:layout_height="@dimen/big_margin"
+                             android:layout_weight="10"
+                             style="@style/SpinnerTheme"
+                             android:paddingLeft="@dimen/small_padding"
+                             android:spinnerMode="dialog" />
+ 
+                         
+                     </LinearLayout>
+ 
+ 
+                 </LinearLayout>
+ 
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
+                     android:paddingTop="8dp">
+ 
+                     <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="RELIGION"
+                         android:padding="4dp"
+                         android:textColor="@color/text_grey"/>
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/enroll_round_background"
+                         android:orientation="horizontal"
+                         android:weightSum="10">
+ 
+                         <Spinner
+                             android:id="@+id/per_religion_spinner"
+                             android:layout_width="wrap_content"
+                             android:layout_height="@dimen/big_margin"
+                             android:layout_weight="10"
+                             style="@style/SpinnerTheme"
+                             android:paddingLeft="@dimen/small_padding"
+                             android:spinnerMode="dialog" />
+ 
+                         
+                     </LinearLayout>
+ 
+ 
+                 </LinearLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="GENDER"
+                        android:padding="4dp"
+                        android:textColor="@color/text_grey"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/enroll_round_background"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <Spinner
+                            android:id="@+id/per_gender_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/big_margin"
+                            android:layout_weight="10"
+                            style="@style/SpinnerTheme"
+                            android:paddingLeft="@dimen/small_padding"
+                            android:spinnerMode="dialog" />
+
+                        
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SMART PHONE USER"
+                        android:padding="4dp"
+                        android:textColor="@color/text_grey"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/enroll_round_background"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <Spinner
+                            android:id="@+id/per_smart_phone_user"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/big_margin"
+                            android:layout_weight="10"
+                            style="@style/SpinnerTheme"
+                            android:paddingLeft="@dimen/small_padding"
+                            android:spinnerMode="dialog" />
+                        
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="WHATS APP USER"
+                        android:padding="4dp"
+                        android:textColor="@color/text_grey"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/enroll_round_background"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <Spinner
+                            android:id="@+id/per_whatsapp_spinner"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/big_margin"
+                            android:layout_weight="10"
+                            style="@style/SpinnerTheme"
+                            android:paddingLeft="@dimen/small_padding"
+                            android:spinnerMode="dialog" />
+
+                        
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+                <Button
+                    android:id="@+id/personal_submit"
+                    android:layout_width="@dimen/filter_menu_width"
+                    android:layout_height="@dimen/noraml_btn_height"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/big_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="@drawable/button_style"
+                    android:text="SUBMIT"
+                    android:clickable="true"
+                    android:textColor="@color/colorAccent" />
+
+            </LinearLayout>
+
+    </ScrollView>
+</FrameLayout>

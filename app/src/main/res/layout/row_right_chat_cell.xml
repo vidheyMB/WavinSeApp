@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/activity_vertical_small_margin"
+    android:layout_marginTop="@dimen/activity_vertical_small_margin"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="@dimen/activity_vertical_small_margin"
+            android:layout_height="@dimen/activity_vertical_small_margin"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_time"/>
+        <TextView
+            android:id="@+id/row_query_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="time ago"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/small_padding"
+            android:textSize="@dimen/h7"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/square_greystroke_bgd"
+        android:layout_gravity="right"
+        android:layout_marginBottom="2dp">
+        <ImageView
+            android:id="@+id/chatImage"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/square_greystroke_bgd"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/row_query_text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/noraml_btn_height"
+        android:text="dkhgkgdkjbkdjvbkhdvbkhbkvbdkjd"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/h5"
+        android:layout_gravity="right"
+        android:background="@drawable/right_chat_cell_backg"
+        android:elevation="@dimen/activity_vertical_small_margin"
+        android:padding="@dimen/activity_vertical_small_margin"/>
+    <ImageView
+        android:id="@+id/row_query_missed_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_phone"/>
+    <TextView
+        android:id="@+id/row_query_sender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="time ago"
+        android:textColor="@color/black"
+        android:layout_gravity="right"
+        android:layout_marginLeft="@dimen/small_padding"
+        android:layout_marginTop="2dp"
+        android:textSize="@dimen/h7"/>
+
+</LinearLayout>
+
