@@ -23,15 +23,15 @@ data class GetCustomerDetailsMobileAppResults(
     var ReturnMessage: Any? = null,
     var ReturnValue: Int? = null,
     var TotalRecords: Int? = null,
-    var lstCustomerIdentityInfo: List<lstCustomerIdentityInfo>? = null,
+    var lstCustomerIdentityInfo: List<LstCustomerIdentityInfos>? = null,
     var lstCustomerJson: List<LstCustomerJsons>? = null,
-    var lstCustomerOfficalInfoJson: List<lstCustomerOfficalInfoJson>? = null,
+    var lstCustomerOfficalInfoJson: List<LstCustomerOfficalInfoJsons>? = null,
     var lstVehicleJson: List<Any>? = null,
 ) : Serializable
 
 
 @JsonClass(generateAdapter = true)
-data class lstCustomerIdentityInfo(
+data class LstCustomerIdentityInfos(
     var IdentityDocument: String? = null,
     var IdentityID: Int? = null,
     var IdentityNo: String? = null,
@@ -42,7 +42,7 @@ data class lstCustomerIdentityInfo(
 
 
 @JsonClass(generateAdapter = true)
-data class lstCustomerOfficalInfoJson(
+data class LstCustomerOfficalInfoJsons(
     var CityId: Int? = null,
     var CountryId: Int? = null,
     var IndustryID: Int? = null,
